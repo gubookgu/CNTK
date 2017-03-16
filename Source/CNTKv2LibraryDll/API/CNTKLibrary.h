@@ -2953,7 +2953,7 @@ namespace CNTK
         std::vector<Variable> Arguments(bool rowMajor = false) const
         {
             return FilteredInputs<Variable>([](const Variable& var) {
-                return (var.IsInput() || var.IsPlaceholder() || var.IsOutput());
+                return IsArgument(var);
             }, rowMajor);
         }
 
@@ -3079,6 +3079,11 @@ namespace CNTK
         static const int MaxNumOutputs = 64;
 
     protected:
+        static bool IsArgument(const Variable& var)
+        {
+            return (var.IsInput() || var.IsPlaceholder() || var.IsOutput());
+        }
+
         ///
         /// Protected constructor for derived 'Function' types to specify the actual input and output variables for the (primitive) Function instance.
         ///
