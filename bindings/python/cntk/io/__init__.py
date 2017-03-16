@@ -102,7 +102,7 @@ class MinibatchSource(cntk_py.MinibatchSource):
           the entire data sweep (as indicated by the MinibatchSource) and parameters
           change their values on the sweep-by-sweep basis specified by the schedule.
           **Important:**
-          Click `here <https://github.com/Microsoft/CNTK/wiki/BrainScript-epochSize-and-Python-epoch_size-in-CNTK>`_ for a full description of this parameter. 
+          Click `here <https://github.com/Microsoft/CNTK/wiki/BrainScript-epochSize-and-Python-epoch_size-in-CNTK>`_ for a full description of this parameter.
         distributed_after (int, defaults to cntk.io.INFINITE_SAMPLES): sample count after which minibatch source becomes distributed
         multithreaded_deserializer (`bool`, defaults to `None`): using multi threaded deserializer
         frame_mode (`bool`, defaults to `False`): Specifies if data should be randomized and returned at the frame
@@ -185,7 +185,7 @@ class MinibatchSource(cntk_py.MinibatchSource):
             minibatch_size_in_samples (int): number of samples to retrieve for
               the next minibatch. Must be > 0.
               **Important:**
-              Click `here <https://github.com/Microsoft/CNTK/wiki/BrainScript-epochSize-and-Python-epoch_size-in-CNTK>`_ for a full description of this parameter. 
+              Click `here <https://github.com/Microsoft/CNTK/wiki/BrainScript-minibatchSize-and-Python-minibatch_size_in_samples-in-CNTK>`_ for a full description of this parameter. 
             input_map (dict): mapping of :class:`~cntk.ops.variables.Variable`
               to :class:`~cntk.cntk_py.StreamInformation` which will be used to convert the
               returned data.
@@ -431,7 +431,7 @@ def ImageDeserializer(filename, streams):
          classes
 
     See also:
-        `Image reader definition <https://github.com/microsoft/cntk/wiki/Image-reader>`_
+        `Image reader definition <https://github.com/microsoft/cntk/wiki/BrainScript-Image-reader>`_
     '''
     image_stream_name = None
     label_stream_name = '_ignore_labels_'
